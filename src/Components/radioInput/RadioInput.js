@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import { useField } from 'formik';
 import styles from './radioInput.module.scss';
 export const RadioInput = (props) => {
+    // eslint-disable-next-line
     const [field, meta] = useField(props);
     const positions = useSelector((state) => state.users.positions);
     const loading = useSelector((state) => state.users.loading);

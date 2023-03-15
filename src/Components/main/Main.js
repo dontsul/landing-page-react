@@ -13,7 +13,7 @@ export const Main = () => {
 
     useEffect(() => {
         dispatch(getToken());
-    }, []);
+    }, [dispatch]);
 
     return (
         <div className="container">

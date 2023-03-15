@@ -1,9 +1,6 @@
 import styles from './user.module.scss';
 export const User = (props) => {
-    const { id, photo, email, name, phone, position, position_id, registration_timestamp } =
-        props.user;
-
-    // console.log(registration_timestamp);
+    const { photo, email, name, phone, position } = props.user;
 
     return (
         <div className={styles.wrap}>

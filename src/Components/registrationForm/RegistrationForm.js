@@ -80,7 +80,7 @@ export const RegistrationForm = () => {
                                 }
                             ),
                     })}
-                    onSubmit={(values, { setSubmitting }) => {
+                    onSubmit={(values, { setSubmitting, resetForm }) => {
                         setSubmitting(false);
                         const formData = new FormData();
 
@@ -109,6 +109,7 @@ export const RegistrationForm = () => {
                                     dispatch(resetItems());
                                     dispatch(getUsers(1));
                                     toast.success(`You registered`);
+                                    resetForm();
                                 } else {
                                     toast.error(data.message);
                                 }

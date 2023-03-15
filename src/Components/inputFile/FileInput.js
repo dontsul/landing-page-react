@@ -1,11 +1,8 @@
-import { useField, ErrorMessage } from 'formik';
+import { ErrorMessage } from 'formik';
 
 import styles from './inputFile.module.scss';
 
 export const FileInput = ({ datas, ...props }) => {
-    const [field, meta] = useField(props);
-    const { name: nameIn, value, ...fieldWithoutName } = field;
-
     return (
         <>
             <div className={styles.wrapInputFile}>
@@ -16,7 +13,6 @@ export const FileInput = ({ datas, ...props }) => {
                         datas.setFieldValue(props.name, event.currentTarget.files[0]);
                     }}
                     {...props}
-                    // {...fieldWithoutName}
                 />
                 <div className={styles.btn} type="submit" onClick={datas.handleSubmit}>
                     Upload
